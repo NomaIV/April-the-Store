@@ -31,7 +31,7 @@ docker build -t april-the-store
 docker run -p 80:80 april-the-store
 
 ## Repository Link
-https://github.com/NomaIV/April-the-Store.git
+[Link to repository](https://github.com/NomaIV/April-the-Store)
 
 ## Features
 Product Catalog:
@@ -66,6 +66,7 @@ Responsive Design:
 
 ## Installation
 Clone the repository:
+
 git clone https://github.com/NomaIV/April-the-Store.git
 
 ## Usage
