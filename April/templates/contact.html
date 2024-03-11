@@ -1,0 +1,70 @@
+{% extends 'index.html' %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<!---Contact Us Section-->
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+</div>
+<div class="container">
+    <div class="row">
+        <!-- Store Information Section -->
+        <div class="col-md-4">
+            <div class="Find-us">
+                <h2 style="text-align: left;text-decoration: underline;">Find Us At:</h2>
+                <address>
+                    4 Old Main St<br>
+                    Durban, Kwa Zulu Natal, 4000<br>
+                    Phone: (031) 454-7890<br>
+                    Hours: Mon-Fri 8am-4pm<br>
+                </address>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="col-md-4">
+            <section id="store-info" class="mt-4 text-center">
+                <h2 style="text-align: center;text-decoration: underline;">Connect With Us:</h2>
+                <address style="text-align: center;">
+                    Email: <a href="mailto:info@april,thestore.com">info@april,thestore.com</a><br>
+                    Website: <a href="http://www.april,thestore.com" target="_blank">www.april,thestore.com</a><br>
+                    Newsletter: <a href="#">Subscribe</a></p>
+                </address>
+                <div id="social-media">
+                    <h2 style="text-align: center;text-decoration: underline;">Follow Us:</h2>
+                    <address style="text-align: center;">
+                        <a href="http://www.facebook.com/apriil,thestore" target="_blank">Facebook</a>
+                        <a href="http://www.twitter.com/april,thestore" target="_blank">Twitter</a>
+                        <a href="http://www.instagram.com/april,thestore" target="_blank">Instagram</a>
+                    </address>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="col-md-14">
+            <div class="Contact-Form">
+                <h2 style="text-align: right;text-decoration: underline;">Send Us a Message</h2>
+                <address style="text-align: right;">
+                    <form action="submit-form.php" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea><br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </address>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="back-to-top">
+    <a href="#">Back to Top</a>
+</div>
+<div class="back-to-store">
+    <a href="/">Back to Store</a>
+</div>
+{% endblock %}

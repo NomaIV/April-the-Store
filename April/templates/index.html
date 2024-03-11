@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>April, the Store</title>
+  
+ <!-- Link to Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <!-- Link to Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+     <style>
+/* Set the background color for the whole page */
+ body {
+    background-color: whitesmoke;
+    font-family: 'Arial', sans-serif;
+ }
+/* Navigation panel hover effect */
+.navbar-nav .nav-item:hover .nav-link {
+    color: blue;
+}
+/* Headings */
+h2, h1, h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+/* Paragraphs */
+p {
+    text-align: center;
+}
+
+/* Unsubscribe text alignment */
+.unsubscribe {
+    text-align: center;
+    color: red;
+    position: relative;
+    bottom: 0px;
+    left: 47%;
+    transform: translateX(-50);  
+}
+/* Back to Store */
+.back-to-store {
+    color: blue;
+    text-align: center;
+}
+/* Back to Top */
+.back-to-top {
+    color: blue;
+    text-align: center;
+}
+/* Style the images inside the socks and mugs sections */
+.mugs-section img {
+    max-width: 100%;
+    height: auto; 
+} 
+.socks-section img {
+    max-width: 100%;
+    height: 250px;
+}
+/*Size of the images*/
+.image-class {
+    width: 100%;
+    height: auto;
+}
+/* Navigation panel removal of bullet points */
+.navbar-nav{
+    list-style: none;   
+}
+/* Style the cards */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Style the buttons */
+.btn {
+    margin-top: 10px;
+    width: 90%;
+    max-width: 100px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: lightgray;
+    color: black;
+}
+     </style>
+</head>
+<body>
+    {% if current_page != 'index' %}
+    <!--Navigation Panel-->
+    <nav id="top" class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">April, the Store</a>
+        <div class="navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto" style="display: flex;flex-direction: row;">
+                <li class="nav-item {% if current_page == 'home' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item {% if current_page == 'products' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'products' %}">Products</a>
+                </li>
+                <li class="nav-item {% if current_page == 'contact' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li class="nav-item {% if current_page == 'about' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'cart' %}">Cart</a>
+                </li>
+             </div>
+ <!-- Search Section -->
+        <div style="text-align: right;margin-top: 1px;">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="searchBtn">
+                <div class="input-group-append">
+                <button class="btn btn-outline-success" type="button" id="searchBtn">Search</button>
+            </div>
+        </div>
+    </div>
+    </nav>
+    {% endif %}
+    </header>
+    <main>
+        {% if current_page == 'index' %}
+        <h1>Welcome to our website!</h1>
+        <div id="home" class="Welcome-section">
+            <h2><a href="home">Home</a></h2>
+            <p>Welcome to our website! We are a company that specializes in providing high-quality products at affordable prices. 
+                Our products are designed to meet the needs of our customers, and we are committed to providing excellent service and customer support.
+                Thank you for choosing us.</p>
+        </div>
+        <div id="products" class="products">
+            <h2><a href="products">Products</a></h2>
+            <p>Browse our selection of products and discover the latest trends in fashion and technology. Shop with confidence and enjoy free shipping on all orders!</p>
+        </div>
+        <div id="contact" class="contact">
+            <h2><a href="contact">Contact</a></h2>
+            <p>Get in touch with us today and let us know how we can assist you. We look forward to hearing from you!</p>
+        </div>
+        <div id ="cart" class="cart">
+            <h2><a href="cart">Cart</a></h2>
+            <p>View your cart and update the quantity of items before checking out.</p>
+        </div>
+        {% endif %}
+        {% if current_page == 'cart' %}
+        (% if user.is_authenticated %)
+        <div class="d-flex jestify-content-end">
+            <div id="account" class="account">
+                <h2><a href="account">Account</a></h2>
+                <p>Manage your account settings and view your order history.</p>
+            </div>
+            <div id="logout" class="logout">
+                <h2><a href="logout">Logout</a></h2>
+                <p>Click here to logout of your account.</p>
+            </div>
+        </div>
+        {% endif %}
+        {% block content %}
+        {% endblock %}  
+    </div>  
+    </div>
+    </main>
+    <!-- Footer Section -->
+    <footer class="container mt-4 text-center">
+        <!-- Unsubscribe Link -->
+        <a href="#" class="unsubscribe">Unsubscribe</a>
+        <p>&copy; 2024 April, The Store. All rights reserved.</p>
+    </footer> 
+</body>
+</html>

@@ -1,0 +1,78 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}Cart{% endblock %}
+
+{% block content %}
+<!-- Cart Section -->
+    <h1>Cart</h1>
+<!--User Account Information Section-->
+    <h3>Account</h3>
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
+
+<!-- Check out Section -->
+    <h3>Checkout</h3>
+    <!---Cart Items and amount-->
+    <!---Select payment option-->
+    <!---Submit order-->
+    <div class="cart-items">
+        <h4>Cart Items</h4>
+        <ul>
+            {% for item in cart %}
+                <li>{{ item.name }} - ${{ item.price }}</li>
+            {% endfor %}
+        </ul>
+        <p>Total: R{{ total }}</p>
+    </div>
+    <div class="payment-options">
+        <h4>Payment Options</h4>
+        <label>
+            <input type="radio" name="payment-option" value="credit-card"> Credit Card
+        </label>
+        <label>
+            <input type="radio" name="payment-option" value="paypal"> Paypal
+        </label>
+        <label>
+            <input type="radio" name="payment-option" value="debit_card"> Debit Card
+        </label>
+        <label>
+            <input type="radio" name="payment-option" value="voucher"> Voucher
+        </label>
+    </div>
+    <div class="checkout">
+        <button type="submit">Checkout</button>
+        <p> Your order has been successfully submitted</p>
+        <p>By submitting this form, you agree to our terms and conditions.</p>
+        <p>We will never share your personal information with anyone.</p>
+        <p>You can unsubscribe at any time by clicking the link in the footer of every email.</p>
+        <p>For more information, please visit our privacy policy.</p>
+        <p>Thank you for your support!</p>
+    </div>
+    <form>
+        <!-- Company logo -->
+        <img src="{% static 'Images/Logo.jpeg' %}" alt="april_the_store_logo" class="logo">
+        <!-- Form Inputs -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <input type="submit" value="Submit">
+
+        <div class="back-to-top">
+            <a href="#">Back to Top</a>
+        </div>
+        <div class="back-to-store">
+            <a href="/">Back to Store</a>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+        
+    
+{% endblock %}
+{% block styles %}
+{% endblock %}
+    </form>  
+</div>

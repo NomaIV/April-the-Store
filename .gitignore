@@ -1,0 +1,22 @@
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore environment-specific settings
+.env
+
+# Ignore database configuration
+*.sqlite3
+
+# Ignore IDE/Editor specific files
+.vscode/
+
+
+# Ignore local development settings
+*.pyc
+*.log
+*.pot
+db.sqlite3
+media/
+static/
+

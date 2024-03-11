@@ -1,0 +1,29 @@
+{% block title %}Login{% endblock %}
+{% block content %}
+<h1>User Registration </h1>
+<!---Use information in views.py-->
+{% if message %}
+<ul>
+    {% for message in message %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<form method="post" action="{% url 'user_auth:register' %}">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" maxlength="40" required>
+    <small> {{ form.username.help_text}}</small>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <small> {{ form.password.help_text}}</small>
+    <br>
+    <label for="Confirm Password:"></label>
+    <input type="password" id="confirm_password" name="confirm_password" required>
+    <small> {{ form.password.help_text}}</small>
+    <br>
+    <button type="submit">Register</button>
+    <br>
+</form>
+{% endblock %}
