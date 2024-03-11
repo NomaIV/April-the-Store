@@ -66,8 +66,8 @@ Responsive Design:
 
 ## Installation
 Clone the repository:
-
 git clone https://github.com/NomaIV/April-the-Store.git
+
 
 ## Usage
 Explore the website to discover a wide range of socks and mugs. Utilise the user-friendly features to browse products, add items to your shopping cart, and enjoy a secure checkout process. Connect with the store through various contact options and take advantage of personalized experiences with user accounts.
