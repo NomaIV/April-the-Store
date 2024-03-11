@@ -4,6 +4,7 @@ __pycache__/
 
 # Ignore environment-specific settings
 .env
+.venv
 
 # Ignore database configuration
 *.sqlite3
