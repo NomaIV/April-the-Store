@@ -66,7 +66,9 @@ Responsive Design:
 
 ## Installation
 Clone the repository:
+```bash
 git clone https://github.com/NomaIV/April-the-Store.git
+```
 
 
 ## Usage
