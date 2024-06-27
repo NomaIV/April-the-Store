@@ -79,6 +79,8 @@ Explore the website to discover a wide range of socks and mugs. Utilise the user
 - HTML
 - CSS
 - Django
+- SQL
+- Bootstrap
 
 ## Contributing
 If you would like to contribute or report issues.
