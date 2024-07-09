@@ -95,7 +95,7 @@ Please note that this project was developed as part of a capstone and some featu
 
 ## Deployment
 This project is deployed on Heroku.
-[Visist April, the Store](
+[Visit April, the Store](https://aprilthestore-3fb3852f6979.herokuapp.com)
 
 ## Licence
 This project is lincensed under MIT License. 
