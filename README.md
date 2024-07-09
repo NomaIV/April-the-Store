@@ -91,7 +91,15 @@ Responsive Design:
 To use April, the Store, visit the deployed website and explore the catalog of mugs and socks. Use the shopping cart to add items, register or log in for a personalised shopping experience and use the checkout process. Interact with product reviews, subscribe to the newsletter and engage with the other avaliable contact options.
 
 ## Limitations
-Please note that this project was developed as part of a capstone and some features, such as the buy button functionality and social media integration (email, Twitter and Instagram), to name a few are not active.
+Please note that this project was developed as part of a capstone, and while it demonstrates many core functionalities, some features are not fully implemented:
+- Buy buttons are non-functional.
+- Unsuubscribe link is not operational.
+- "Connect with us" links (email, newsletter) are not active.
+- "Follow us" links (Facebook, Twitter, Instagram) do not function.
+- Send us a message submit link is non-functional.
+- Search functionality on the website is not operational.
+
+These limitations are part of the project's current state and were included for demonstration purposes.
 
 ## Deployment
 This project is deployed on Heroku.
