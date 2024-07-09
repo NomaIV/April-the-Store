@@ -1,34 +1,16 @@
-April, the Store
+# April, the Store
 
-## Getting Started
+## Project Overview
+April, the Store is a Django capstone project, designed as an online secure shopping store specialising in affordable socks and mugs.
 
-### Prerequisites
-- Python 3.8
-- Docker
-
-### Setting up Virtual Environment (Optional)
-''' bash
-### Create and activate a virtual environment
-python3 -m venv venv
-source venv/bin/activate  # On Windows, use venv\Scripts\activate
-
-### Install dependencies
-pip install -r requirements.txt
-
-### Running the Django Application
-Activate the virtual environment (if not already active)
-
-source venv/bin/activate  # On Windows, use venv\Scripts\activate
-
-### Run Django development server
-python3 manage.py runserver or python manage.py runserver
-
-### Building and Running with Docker
-Build Docker image
-docker build -t april-the-store
-
-### Run Docker container
-docker run -p 80:80 april-the-store
+## Technologies Used
+- Python
+- HTML
+- CSS
+- Django
+- SQLite
+- Bootsrap
+- Heroku (for deployment)
 
 ## Repository Link
 [Link to repository](https://github.com/NomaIV/April-the-Store)
@@ -64,26 +46,60 @@ Order History:
 Responsive Design:
 - Ensure the website is accessible and user-friendly on various devices, including desktops, tablets, and smartphones.
 
-## Installation
-Clone the repository:
-```bash
-git clone https://github.com/NomaIV/April-the-Store.git
-```
 
+### Prerequisites
+- Python 3.8
+- Docker
+
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/NomaIV/April-the-Store.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd store
+   ```
+3. Create and activate virtual environment (Optional):
+   ```sh
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows, use venv\Scripts\activate
+   ```
+4. Install dependencies:
+   ```sh
+   pip3 install -r requirements.txt
+   ```
+5. Running the Django application:
+   - Activate the virtual environment (if not already active):
+     ```sh
+     source venv/bin/activate  # On Windows, use venv\Scripts\activate
+     ```
+   - Run Dajngo development server:
+     ```sh
+     python3 manage.py runserver
+     ```
+6. Building and running with Docker:
+   ```sh
+   # Build Docker image
+   docker build -t april-the-store .
+
+   # Run Docker container
+   docker run -p 80:80 april-the-store
+   ```
 
 ## Usage
-Explore the website to discover a wide range of socks and mugs. Utilise the user-friendly features to browse products, add items to your shopping cart, and enjoy a secure checkout process. Connect with the store through various contact options and take advantage of personalized experiences with user accounts.
+To use April, the Store, visit the deployed website and explore the catalog of mugs and socks. Use the shopping cart to add items, register or log in for a personalised shopping experience and use the checkout process. Interact with product reviews, subscribe to the newsletter and engage with the other avaliable contact options.
 
-## Technology Used:
-- Python
-- HTML
-- CSS
-- Django
-- SQL
-- Bootstrap
+## Limitations
+Please note that this project was developed as part of a capstone and some features, such as the buy button functionality and social media integration (email, Twitter and Instagram), to name a few are not active.
 
-## Contributing
-If you would like to contribute or report issues.
+## Deployment
+This project is deployed on Heroku.
+[Visist April, the Store](
 
-## License
-This project is licensed under the MIT License.
+## Licence
+This project is lincensed under MIT License. 
+
+
+
+
