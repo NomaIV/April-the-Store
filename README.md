@@ -88,7 +88,9 @@ Responsive Design:
    ```
 
 ## Usage
-To use April, the Store, visit the deployed website and explore the catalog of mugs and socks. Use the shopping cart to add items, register or log in for a personalised shopping experience and use the checkout process. Interact with product reviews, subscribe to the newsletter and engage with the other avaliable contact options.
+To use April, the Store, visit the deployed website on Heroku and explore the catalog of mugs and socks. Use the shopping cart to add items, register or log in for a personalised shopping experience and use the checkout process. Interact with product reviews, subscribe to the newsletter and engage with the other avaliable contact options.
+
+[Vist April, the Store on Heroku](https://aprilthestore-3fb3852f6979.herokuapp.com)
 
 ## Limitations
 Please note that this project was developed as part of a capstone, and while it demonstrates many core functionalities, some features are not fully implemented:
